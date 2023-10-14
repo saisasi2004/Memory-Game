@@ -73,6 +73,11 @@ function updateScore() {
 
 function checkWin() {
     if (document.querySelectorAll(".matched").length === cards.length) {
+        const audio = document.createElement("audio");
+            audio.src = "congo.mp3";
+
+            audio.autoplay = true;
+            document.body.appendChild(audio);
         showPopup(); // Show the pop-up when the game is completed
     }
 }
